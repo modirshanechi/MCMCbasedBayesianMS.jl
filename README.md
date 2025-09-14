@@ -9,7 +9,7 @@ This package provides a sampling-based implementation of the Bayesian model-sele
 
 ## Installation
 
-The theoretical details behind the implementation of the package is provided in [`theory.pdf`](theory.pdf).
+The theoretical details behind the implementation of the package are provided in [`theory.pdf`](theory.pdf).
 
 [![Preview](figs/theory.png)](theory.pdf)
 
@@ -25,14 +25,14 @@ using Pkg; Pkg.add(url = "https://github.com/modirshanechi/MCMCbasedBayesianMS.j
 ```julia
 using MCMCbasedBayesianMS
 
-# generating a syntetic data set
+# generating a synthetic data set
 #   20 subjects * 2 models
 #   LMatrix[n,m] = log-prob of subject n under model m
 LMatrix = (rand(20,2) .- 1) * 10;
 #   assigning the first 15 to model 1 and the rest to model 2
 LMatrix[1:15,1] .+= 10; LMatrix[16:20,2] .+= 10; 
 
-# Bayesian Model Selection (BMS) object with 10 chaoins and 100K samples per chain
+# Bayesian Model Selection (BMS) object with 10 chains and 100K samples per chain
 BMS = BMSObj(LMatrix, 
         bms_basechain = BMSBase(n_chains = 10, n_samples = 100000),
         bms_borsamp = BMSBorSampNaive(n_samples = 100000))
