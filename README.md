@@ -7,7 +7,7 @@
 This package provides a sampling-based implementation of the Bayesian model-selection method of [Stephan et al. (2009) in NeuroImage](https://doi.org/10.1016/j.neuroimage.2009.03.025). Earlier versions of this code were used for the analyses in [Modirshanechi et al. (2025a)](https://doi.org/10.1101/2022.07.05.498835) and [Modirshanechi et al. (2025b)](https://osf.io/preprints/psyarxiv/cnkyz_v2).
 
 
-## Installation
+## Theory
 
 The theoretical details behind the implementation of the package are provided in [`theory.pdf`](theory.pdf).
 
