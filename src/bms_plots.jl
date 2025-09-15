@@ -1,8 +1,6 @@
 function plotstats(BMS::BMSResults; figsize=(1200,400))
-    # Create a 1x2 layout
     plt = plot(layout = (1,3), size=figsize)
     
-    # Left subplot: estimates with error bars
     bar!(
         plt[1],
         1:BMS.object.n_model,
@@ -13,7 +11,6 @@ function plotstats(BMS::BMSResults; figsize=(1200,400))
         legend = :topleft,
     )
 
-    # Right subplot: ground truth
     bar!(
         plt[2],
         1:BMS.object.n_model,
@@ -23,7 +20,6 @@ function plotstats(BMS::BMSResults; figsize=(1200,400))
         legend = :topleft,
     )
 
-    # Right subplot: ground truth
     heatmap!(
         plt[3],
         BMS.stats.exp_M,
@@ -42,7 +38,6 @@ function plotrsamples(BMS::BMSResults; figsize=(300,400))
     plt = plot(layout=(1, N), size=(figsize[1]*N, figsize[2]))
 
     for i in 1:N
-        # pick subplot i
         for j in 1:M
             density!(
                 plt[i],
