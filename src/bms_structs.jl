@@ -4,11 +4,11 @@
     n_chains        # number of chains
     n_samples       # number of samples per chain
     n_thinning      # thinning period
-    n_burnin        # lenght of burnout
+    n_burnin        # length of burn-in
     n_change        # number of changes in M
     n_scale         # n_scale of P_r|m
     ϵ               # ϵ for P_r|m
-    uniform_initial # whether initial sample is unofrm
+    uniform_initial # whether initial sample is uniform
 end
 function BMSBase(; n_chains = 40, n_samples = 100000,
         n_thinning = 50, n_burnin = n_thinning, n_change = 1, n_scale = 1., ϵ = 1., uniform_initial = false)
