@@ -17,7 +17,7 @@ The theoretical details behind the implementation of the package are provided in
 ## Installation
 
 ```julia
-using Pkg; Pkg.add(url = "https://github.com/modirshanechi/MCMCbasedBayesianMS.jl.git")
+using Pkg; Pkg.add(url = "https://github.com/modirshanechi/MCMCbasedBayesianMS.jl", rev="main")
 ```
 
 ## Usage
