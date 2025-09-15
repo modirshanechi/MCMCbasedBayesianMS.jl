@@ -2,8 +2,7 @@ module MCMCbasedBayesianMS
 
 using Random, Statistics, Distributions
 using ConcreteStructs
-using DataFrames
-using Plots
+using Plots, StatsPlots
 
 include("bms_structs.jl")
 include("posterior_mcmc.jl")
